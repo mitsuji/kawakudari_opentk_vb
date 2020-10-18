@@ -37,22 +37,51 @@ It will allow programming for [IchigoJam](https://ichigojam.net/index-en.html)-l
 
 ## Prerequisite
 
+### Windows
+
+* [Download](https://dotnet.microsoft.com/download/dotnet-framework) and install .Net Framework.
+(In most cases, it is pre-installed.)
+
+
+### Linux, macOS
+
 * [Download](https://www.mono-project.com/download/stable/) and install mono suitable for your environment.
 * [Download](https://www.mono-project.com/docs/about-mono/languages/visualbasic/) and install Visual Basic suitable for your environment.(In most cases, the distribution provides the package.)
 * Download and install packages related OpenGL, OpenGL ES and OpenAL suitable for your environment.
 
+
+
+
 ## How to use
+
+### Windows
 
 To build it
 ```
-$ mcs -r:OpenTK.dll Kawakudari.vb IchigoJam.vb
+> vbc /r:OpenTK.dll Kawakudari.vb IchigoJam.vb
+```
+Or with full path to compiler,
+```
+> \Windows\Microsoft.NET\Framework64\v3.5\vbc.exe /r:OpenTK.dll Kawakudari.vb IchigoJam.vb
+```
+
+To run it
+```
+> Kawakudari.exe
+```
+
+
+### Linux, macOS
+
+To build it
+```
+$ vbc -r:OpenTK.dll Kawakudari.vb IchigoJam.vb
 ```
 
 To run it
 ```
 $ mono Kawakudari.exe
 ```
-(In windows environment, you can run it by just double click 'Kawakudari.exe' in Explorer)
 
 
 
